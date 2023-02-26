@@ -27,6 +27,13 @@
 .breadcrumb .breadcrumb-item a {
   color: #cecece;
 }
+
+@media (max-width: 425px) {
+    .breadcrumb {
+      display: none;
+    }
+  }
+  
 </style>
 
 <script>

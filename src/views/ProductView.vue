@@ -8,10 +8,10 @@
     />
     <div class="product-container">
       <b-row>
-        <b-col class="gap-3">
+        <b-col class="gap-3" md="12" lg="6">
           <div class="product-images">
             <b-row>
-              <b-col cols="3">
+              <b-col lg="4" md="6" sm="12">
                 <div class="all-images">
                   <div
                     v-for="image in productImages"
@@ -22,8 +22,8 @@
                   </div>
                 </div>
               </b-col>
-              <b-col>
-                <div v-if="!selectedImage.src" class="selectedImage not">
+              <b-col lg="8" md="6" sm="12">
+                <div v-if="!selectedImage.src" class="selectedImage">
                   <img
                     :src="productImages[0].src"
                     :alt="productImages[0].alt"
@@ -46,18 +46,20 @@
 .product {
   padding: 30px 10%;
 }
-.product-continer {
-  padding: 0 10%;
+.product-container {
+  max-height: 80vh;
 }
-
+.product .product-images {
+    height: 80vh;
+}
 .product .product-images .all-images {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  overflow-y: auto;
 }
 .product .product-images .all-images > div {
-  width: 170px;
-  height: 170px;
+  width: 100%;
   border: solid 0.3px #eee;
   border-radius: 10px;
   overflow: hidden;
@@ -71,7 +73,7 @@
   border: solid 0.3px transparent;
   border-radius: 10px;
   width: 100%;
-  height: 100%;
+  height: 170px;
 }
 .product .selectedImage {
   width: 100%;
@@ -83,6 +85,18 @@
   height: 100%;
 }
 
+@media (max-width: 768px) {
+    .product .product-images .all-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .product .product-images .all-images > div {
+        max-width: 30%;
+    }
+    .product .selectedImage {
+        margin-top: 30px;
+    }
+}
 </style>
 
 <script>
