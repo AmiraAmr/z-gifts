@@ -1,58 +1,119 @@
 <template>
-  <div>
-    <b-form-group
-      id="input-group-1"
-      label="Email address:"
-      label-for="input-1"
-      description="We'll never share your email with anyone else."
-    >
-      <b-form-input
-        v-model="email"
-        id="input-1"
-        type="email"
-        required
-        placeholder="Enter email"
-      ></b-form-input>
-    </b-form-group>
-
-    <h2>{{ store.state }}</h2>
-    <b-button @click="store.setState('name', 'Laura')">Cambiar nombre</b-button>
-    <b-button @click="store.setState('lastname', 'Q')">Set new key</b-button>
-    <b-button @click="store.setState('users', ['Q', 'John'])"
-      >Set array</b-button
-    >
-
-    <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-      <b-form-input
-        id="input-2"
-        required
-        placeholder="Enter name"
-      ></b-form-input>
-    </b-form-group>
+  <div class="product-style">
+    <b-row gap="2px">
+      <b-col
+        lg="3"
+        md="6"
+        sm="12"
+        v-for="image in productStyles"
+        :key="image.idx"
+        @click="setStyle(image.idx)"
+      >
+        <b-row>
+          <div
+            class="style-image"
+            v-if="selectedStyle.idx === image.idx"
+            style="border-color: #b07943"
+          >
+            <img :src="image.src" :alt="image.alt" />
+          </div>
+          <div
+            class="style-image"
+            v-else-if="!selectedStyle.src && image.idx === 0"
+            style="border-color: #b07943"
+          >
+            <img :src="image.src" :alt="image.alt" />
+          </div>
+          <div class="style-image" v-else>
+            <img :src="image.src" :alt="image.alt" />
+          </div>
+        </b-row>
+        <b-row>
+          <div class="style-description">{{ image.description }}</div>
+        </b-row>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
+<style scoped>
+.product-style .style-image {
+  border-radius: 5px;
+  border: solid 0.3px #eee;
+  cursor: pointer;
+}
+.product-style .style-image:hover,
+.product-style .style-image.active {
+  border-color: #b07943;
+}
+.product-style .style-image > img {
+  width: 100%;
+  height: 100%;
+}
+.product-style .style-description {
+  font-size: 14px;
+  padding: 5px 22px 15px 5px;
+  text-align: left;
+  text-transform: capitalize;
+}
+</style>
+
 <script>
+import image_1 from "@/assets/products/wristband-bracelet.png";
 export default {
-  props: ["store"],
   data() {
     return {
-      email: "",
+      productStyles: [
+        {
+          idx: 0,
+          src: image_1,
+          alt: "bracelet",
+          description: "default style",
+        },
+        {
+          idx: 1,
+          src: image_1,
+          alt: "bracelet",
+          description: "description for bracelet style",
+        },
+        {
+          idx: 2,
+          src: image_1,
+          alt: "bracelet",
+          description: "description for bracelet style",
+        },
+        {
+          idx: 3,
+          src: image_1,
+          alt: "bracelet",
+          description: "description for bracelet style",
+        },
+        {
+          idx: 4,
+          src: image_1,
+          alt: "bracelet",
+          description: "description for bracelet style",
+        },
+        {
+          idx: 5,
+          src: image_1,
+          alt: "bracelet",
+          description: "description for bracelet style",
+        },
+        {
+          idx: 6,
+          src: image_1,
+          alt: "bracelet",
+          description: "description for bracelet style",
+        },
+      ],
+      selectedStyle: {},
     };
   },
   methods: {
-    //nextStep() {
-    /*if (this.email.length > 0) return true;
-  
-        this.$bvToast.toast(`El formluario tiene campos obligatorios`, {
-          title: "Error",
-          autoHideDelay: 2000,
-          variant: "danger",
-          toaster: "b-toaster-bottom-right"
-        });
-        this.$emit("error", true);
-        return false;*/
-    //}
+    setStyle: function (idx) {
+      this.selectedStyle = this.productStyles[idx];
+    },
   },
 };
 </script>

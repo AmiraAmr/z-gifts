@@ -7,7 +7,7 @@
       :level-four="levelFour"
     />
     <div class="product-container">
-      <b-row>
+      <b-row align-v="stretch">
         <b-col class="gap-3" md="12" lg="6">
           <div class="product-images">
             <b-row>
@@ -36,8 +36,24 @@
             </b-row>
           </div>
         </b-col>
+
         <b-col>
-          <product-selection />
+          <b-row align-h="between">
+            <b-col cols="2">
+              <div class="sale">Sale</div>
+            </b-col>
+            <b-col cols="2">
+              <div class="product-id">
+                <b-row class="m-0" align-h="end">Product ID</b-row>
+                <b-row class="m-0" align-h="end">{{ productID }}</b-row>
+              </div>
+            </b-col>
+          </b-row>
+
+          <!-- Step component -->
+          <b-row>
+            <product-selection />
+          </b-row>
         </b-col>
       </b-row>
     </div>
@@ -87,6 +103,21 @@
   height: 100%;
 }
 
+.product .sale {
+  background-color: #b07943;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  border-radius: 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.product .product-id {
+  color: #cecece;
+  text-align: right;
+  align-items: end;
+}
+
 @media (max-width: 768px) {
   .product .product-images .all-images {
     flex-direction: row;
@@ -106,7 +137,7 @@ import BreadCrumbs from "@/components/Global/BreadCrumbs.vue";
 import image_1 from "@/assets/products/cool-hibiscus-tie-dye-braided-bracelet@small.jpg";
 import image_2 from "@/assets/products/personalized-keychains.jpg";
 import image_3 from "@/assets/products/white-black-back-wristband-bracelet@small.jpg";
-import ProductSelection from '@/components/Stepper/ProductSelection.vue';
+import ProductSelection from "@/components/Stepper/ProductSelection.vue";
 
 export default {
   name: "ProductView",
@@ -127,6 +158,7 @@ export default {
       levelFour: {
         text: "Braceletes",
       },
+      productID: "0102153",
       productImages: [
         {
           idx: 0,

@@ -1,20 +1,8 @@
 <template>
   <div class="d-stepper">
-    <b-card
-      class="my-4 overflow-hidden"
-      bg-variant="light"
-      no-body
-      :class="{ 'border-danger': error, 'shake-error': shake }"
-      v-loading="loading"
-    >
+    <div :class="{ 'border-danger': error, 'shake-error': shake }">
       <b-card-body class="d-flex">
-        <div v-if="steps[step].icon" class="d-none d-sm-block">
-          <i class="fas fa-fw fa-3x mr-4" :class="iconClasses"></i>
-        </div>
         <div>
-          <h3>{{ step + 1 }}. {{ steps[step].name }}</h3>
-          <p class="text-muted">{{ steps[step].desc }}</p>
-
           <div v-if="!fatalError">
             <transition :name="effect" mode="out-in">
               <keep-alive>
@@ -25,7 +13,6 @@
                   :setState="setState"
                   ref="step"
                   :is="stepComponent"
-                  @loading="loadingAction"
                   @error="errorHandler"
                   @fatal-error="blockStepper"
                   @can-continue="nextStepAction"
@@ -37,37 +24,50 @@
           <div v-else>{{ fatalErrorMsg }}</div>
         </div>
       </b-card-body>
-    </b-card>
+    </div>
 
-    <div class="footer d-flex justify-content-end" v-if="!fatalError">
-      <b-button
-        v-if="step > 0"
-        variant="light"
-        :disabled="loading"
-        class="text-primary"
-        @click="backStep"
-      >
-        <i class="fas fa-angle-double-left"></i> Atrás
-      </b-button>
-
+    <div class="footer flex flex-col" v-if="!fatalError">
       <b-button
         v-if="step < steps.length - 1"
-        variant="success"
-        class="ml-2"
+        class="next-button"
         @click="nextStep"
-        :disabled="loading"
       >
-        Siguiente
-        <i class="fas fa-angle-double-right"></i>
+        {{ steps[step].NextLabel }}
+        <div class="arrow-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27"
+            height="24"
+            viewBox="0 0 27.666 24.045"
+          >
+            <path
+              data-name="noun_Arrow Left_2682937"
+              d="M12.02 0 2 10.032l-2 2 2 2 10.02 10.013 2-1.993-8.61-8.61h22.256v-2.825H5.407L14.018 2z"
+              transform="rotate(180 13.833 12.023)"
+              style="fill: #fff"
+            />
+          </svg>
+        </div>
       </b-button>
 
-      <b-button
-        v-if="steps[step].confirm"
-        variant="success"
-        class="ml-2"
-        @click="$emit('confirm')"
-        >{{ steps[step].confirm }}</b-button
-      >
+      <b-button v-if="step > 0" class="prev-button" @click="backStep">
+        <div class="arrow-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27.666"
+            height="24.045"
+            viewBox="0 0 27.666 24.045"
+          >
+            <path
+              data-name="noun_Arrow Left_2682937"
+              d="M12.02 0 2 10.032l-2 2 2 2 10.02 10.013 2-1.993-8.61-8.61h22.256v-2.825H5.407L14.018 2z"
+              style="fill: #fff"
+            />
+          </svg>
+        </div>
+
+        {{ steps[step].PreviuosLabel }}
+      </b-button>
     </div>
   </div>
 </template>
@@ -87,7 +87,6 @@ export default {
         resetState: this.resetState,
       },
       step: 0,
-      loading: false,
       error: false,
       fatalError: false,
       fatalErrorMsg: "",
@@ -101,11 +100,6 @@ export default {
     },
     stepComponent() {
       return this.steps[this.step].component;
-    },
-    iconClasses() {
-      if (!this.activeStep.icon) return "";
-      else if (/\s/.test(this.activeStep.icon)) return this.activeStep.icon;
-      return `fas ${this.activeStep.icon}`;
     },
   },
   methods: {
@@ -137,7 +131,6 @@ export default {
     },
     resetParams() {
       this.error = false;
-      this.loading = false;
       this.fatalErrorMsg = "";
       this.fatalError = false;
     },
@@ -151,12 +144,6 @@ export default {
     },
     nextStep() {
       if (!this.$refs.step.nextStep) return this.nextStepAction();
-
-      if (this.$refs.step.nextStep()) {
-        if (!this.loading) {
-          this.nextStepAction();
-        }
-      }
     },
     nextStepAction() {
       this.effect = "in-out-translate-fade";
@@ -168,54 +155,11 @@ export default {
       this.resetParams();
       if (this.step > 0) this.step--;
     },
-    loadingAction(status) {
-      this.loading = status;
-      //if (!status) this.nextStepAction();
-    },
   },
 };
 </script>
 
 <style>
-.d-stepper .d-stepper-header {
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.d-stepper .d-stepper-header::before {
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background: #ddd;
-  top: 20px;
-  left: 0;
-  content: " ";
-}
-
-.d-stepper .step-number {
-  background: #e9e9e9;
-  border-radius: 50%;
-  text-align: center;
-  height: 40px;
-  width: 40px;
-  display: flex;
-}
-.d-stepper .step-number-content {
-  transition: transform 0.2s;
-  z-index: 2;
-  width: 68px;
-}
-
-.d-stepper .step-number-content div {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.d-stepper .step-number-content.active {
-  transform: scale(1.25);
-}
-
 .in-out-translate-fade-enter-active,
 .in-out-translate-fade-leave-active {
   transition: all 0.15s;
@@ -244,5 +188,51 @@ export default {
 }
 .out-in-translate-fade-leave-active {
   transform: translateX(100px);
+}
+
+.d-stepper .footer {
+  width: 100%;
+}
+
+.d-stepper .next-button,
+.d-stepper .next-button:focus,
+.d-stepper .prev-button {
+  position: relative;
+  font-size: 20px;
+  background-color: #b07943;
+  width: 100%;
+  padding: 18px 10px 20px 10px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+  border-color: #b07943;
+  box-shadow: none;
+}
+.d-stepper .next-button:hover {
+  background-color: #b07943;
+  border-color: #b07943;
+  opacity: 0.8;
+}
+
+.d-stepper .prev-button,
+.d-stepper .prev-button:focus {
+  background-color: #707070;
+  box-shadow: none;
+  margin-top: 28px;
+}
+.d-stepper .prev-button:hover {
+  background-color: #707070;
+  border-color: #707070;
+  opacity: 0.8;
+}
+.d-stepper .next-button .arrow-icon {
+  position: absolute;
+  right: 8%;
+  top: 25%;
+}
+.d-stepper .prev-button .arrow-icon {
+  position: absolute;
+  left: 8%;
+  top: 25%;
 }
 </style>

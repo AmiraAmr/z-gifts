@@ -1,44 +1,103 @@
 <template>
-    <div>
-      {{ store.state }}
-      <b-button @click="store.resetState">Reset state</b-button>
-      <b-button @click="addUsers">Add users</b-button>
-      <b-form-group
-        id="input-group-1"
-        label="Email address:"
-        label-for="input-1"
-        description="We'll never share your email with anyone else."
+  <div class="product-color">
+    <b-row gap="2px">
+      <b-col
+        lg="3"
+        md="6"
+        sm="12"
+        v-for="image in productColors"
+        :key="image.idx"
+        @click="setColor(image.idx)"
       >
-        <b-form-input id="input-1" type="email" required placeholder="Enter email"></b-form-input>
-      </b-form-group>
-  
-      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-        <b-form-input id="input-2" required placeholder="Enter name"></b-form-input>
-      </b-form-group>
-  
-      <b-form-group id="input-group-3" label="Food:" label-for="input-3">
-        <b-form-select id="input-3" required></b-form-select>
-      </b-form-group>
-  
-      <b-form-group id="input-group-4">
-        <b-form-checkbox-group id="checkboxes-4">
-          <b-form-checkbox value="me">Check me out</b-form-checkbox>
-          <b-form-checkbox value="that">Check that out</b-form-checkbox>
-        </b-form-checkbox-group>
-      </b-form-group>
-    </div>
-  </template>
-  
-  <script>
-  
-  export default {
-    props: ["store"],
-    methods: {
-      
-    }
-  };
-  </script>
-  
-  <style>
-  </style>
-  
+        <b-row>
+          <div
+            class="color-image"
+            v-if="selectedColor.idx === image.idx"
+            style="border-color: #b07943"
+          >
+            <img :src="image.src" :alt="image.alt" />
+          </div>
+          <div
+            class="color-image"
+            v-else-if="!selectedColor.src && image.idx === 0"
+            style="border-color: #b07943"
+          >
+            <img :src="image.src" :alt="image.alt" />
+          </div>
+          <div class="color-image" v-else>
+            <img :src="image.src" :alt="image.alt" />
+          </div>
+        </b-row>
+        <b-row>
+          <div class="color-description">{{ image.description }}</div>
+        </b-row>
+      </b-col>
+    </b-row>
+  </div>
+</template>
+
+<style scoped>
+.product-color .color-image {
+  border-radius: 5px;
+  border: solid 0.3px #eee;
+  cursor: pointer;
+}
+.product-color .color-image:hover,
+.product-color .color-image.active {
+  border-color: #b07943;
+}
+.product-color .color-image > img {
+  width: 100%;
+  height: 100%;
+}
+.product-color .color-description {
+  font-size: 14px;
+  padding: 5px 22px 15px 5px;
+  text-align: left;
+  text-transform: capitalize;
+}
+</style>
+
+<script>
+import image_1 from "@/assets/products/wristband-bracelet.png";
+export default {
+  data() {
+    return {
+      productColors: [
+        {
+          idx: 0,
+          src: image_1,
+          alt: "bracelet",
+          description: "default color",
+        },
+        {
+          idx: 1,
+          src: image_1,
+          alt: "bracelet",
+          description: "description for bracelet color",
+        },
+        {
+          idx: 2,
+          src: image_1,
+          alt: "bracelet",
+          description: "description for bracelet color",
+        },
+        {
+          idx: 3,
+          src: image_1,
+          alt: "bracelet",
+          description: "description for bracelet color",
+        },
+      ],
+      selectedColor: {},
+    };
+  },
+  methods: {
+    setColor: function (idx) {
+      this.selectedColor = this.productColors[idx];
+    },
+  },
+};
+</script>
+
+<style></style>
