@@ -29,11 +29,10 @@
 }
 
 @media (max-width: 425px) {
-    .breadcrumb {
-      display: none;
-    }
+  .breadcrumb {
+    display: none;
   }
-  
+}
 </style>
 
 <script>

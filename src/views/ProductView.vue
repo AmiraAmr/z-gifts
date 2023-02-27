@@ -36,7 +36,9 @@
             </b-row>
           </div>
         </b-col>
-        <b-col>Some data</b-col>
+        <b-col>
+          <product-selection />
+        </b-col>
       </b-row>
     </div>
   </div>
@@ -50,7 +52,7 @@
   max-height: 80vh;
 }
 .product .product-images {
-    height: 80vh;
+  height: 80vh;
 }
 .product .product-images .all-images {
   display: flex;
@@ -86,16 +88,16 @@
 }
 
 @media (max-width: 768px) {
-    .product .product-images .all-images {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .product .product-images .all-images > div {
-        max-width: 30%;
-    }
-    .product .selectedImage {
-        margin-top: 30px;
-    }
+  .product .product-images .all-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .product .product-images .all-images > div {
+    max-width: 30%;
+  }
+  .product .selectedImage {
+    margin-top: 30px;
+  }
 }
 </style>
 
@@ -104,6 +106,7 @@ import BreadCrumbs from "@/components/Global/BreadCrumbs.vue";
 import image_1 from "@/assets/products/cool-hibiscus-tie-dye-braided-bracelet@small.jpg";
 import image_2 from "@/assets/products/personalized-keychains.jpg";
 import image_3 from "@/assets/products/white-black-back-wristband-bracelet@small.jpg";
+import ProductSelection from '@/components/Stepper/ProductSelection.vue';
 
 export default {
   name: "ProductView",
@@ -147,6 +150,7 @@ export default {
   },
   components: {
     BreadCrumbs,
+    ProductSelection,
   },
 };
 </script>
