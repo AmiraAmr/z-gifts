@@ -8,10 +8,10 @@
     />
     <div class="product-container">
       <b-row align-v="stretch">
-        <b-col class="gap-3" md="12" lg="6">
+        <b-col md="12" lg="6">
           <div class="product-images">
             <b-row>
-              <b-col lg="4" md="6" sm="12">
+              <b-col lg="3" md="6" sm="12">
                 <div class="all-images">
                   <div
                     v-for="image in productImages"
@@ -91,7 +91,7 @@
   border: solid 0.3px transparent;
   border-radius: 10px;
   width: 100%;
-  height: 170px;
+  height: 150px;
 }
 .product .selectedImage {
   width: 100%;

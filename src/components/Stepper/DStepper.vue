@@ -7,10 +7,7 @@
             <transition :name="effect" mode="out-in">
               <keep-alive>
                 <component
-                  :store="store"
-                  :state="state"
                   :step="step"
-                  :setState="setState"
                   ref="step"
                   :is="stepComponent"
                   @error="errorHandler"
@@ -76,16 +73,10 @@
 export default {
   name: "DStepper",
   props: {
-    steps: { type: Array, default: () => [] },
-    initialState: { type: Object, default: () => ({}) },
+    steps: { type: Array, default: () => [] }
   },
   data() {
     return {
-      store: {
-        state: this.initialState,
-        setState: this.setState,
-        resetState: this.resetState,
-      },
       step: 0,
       error: false,
       fatalError: false,
@@ -105,17 +96,6 @@ export default {
   methods: {
     setStep(step) {
       if (step >= 1 && step <= this.steps.length) this.step = step - 1;
-    },
-    resetState() {
-      this.store.state = {
-        ...this.initialState,
-      };
-    },
-    setState(key, value) {
-      this.store.state = {
-        ...this.store.state,
-        [key]: value,
-      };
     },
     errorHandler(payload) {
       this.error = payload;

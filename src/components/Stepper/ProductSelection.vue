@@ -1,6 +1,6 @@
 <template>
   <b-container id="ProductSelection" class="my-4">
-    <d-stepper :steps="steps" :initial-state="{ name: 'Carlos', users: [] }">
+    <d-stepper :steps="steps">
       <template #fatal-error="{ errorMsg }">{{ errorMsg }}</template>
     </d-stepper>
   </b-container>
