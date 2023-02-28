@@ -73,7 +73,7 @@
 export default {
   name: "DStepper",
   props: {
-    steps: { type: Array, default: () => [] }
+    steps: { type: Array, default: () => [] },
   },
   data() {
     return {

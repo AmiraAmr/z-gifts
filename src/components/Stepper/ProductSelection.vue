@@ -1,9 +1,9 @@
 <template>
-  <b-container id="ProductSelection" class="my-4">
+  <div id="ProductSelection" class="my-4">
     <d-stepper :steps="steps">
       <template #fatal-error="{ errorMsg }">{{ errorMsg }}</template>
     </d-stepper>
-  </b-container>
+  </div>
 </template>
 
 <script>

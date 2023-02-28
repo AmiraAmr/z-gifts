@@ -7,11 +7,11 @@
       :level-four="levelFour"
     />
     <div class="product-container">
-      <b-row align-v="stretch">
-        <b-col md="12" lg="6">
+      <b-row>
+        <b-col md="12" lg="6" class="images-cont">
           <div class="product-images">
             <b-row>
-              <b-col lg="3" md="6" sm="12">
+              <b-col lg="3" md="4" sm="12">
                 <div class="all-images">
                   <div
                     v-for="image in productImages"
@@ -22,7 +22,7 @@
                   </div>
                 </div>
               </b-col>
-              <b-col lg="8" md="6" sm="12">
+              <b-col lg="9" md="8" sm="12">
                 <div v-if="!selectedImage.src" class="selectedImage">
                   <img
                     :src="productImages[0].src"
@@ -35,17 +35,20 @@
               </b-col>
             </b-row>
           </div>
+          
+          <product-carousel :productImages="productImages" />
         </b-col>
 
-        <b-col>
+        <b-col md="12" lg="6">
+          <div class="right-side">
           <b-row align-h="between">
-            <b-col cols="2">
+            <b-col xl="3" lg="4" md="2" sm="3">
               <div class="sale">Sale</div>
             </b-col>
-            <b-col cols="2">
+            <b-col lg="4" md="3" sm="5">
               <div class="product-id">
-                <b-row class="m-0" align-h="end">Product ID</b-row>
-                <b-row class="m-0" align-h="end">{{ productID }}</b-row>
+                <div class="m-0" align-h="end">Product ID</div>
+                <div class="m-0" align-h="end">{{ productID }}</div>
               </div>
             </b-col>
           </b-row>
@@ -54,6 +57,7 @@
           <b-row>
             <product-selection />
           </b-row>
+        </div>
         </b-col>
       </b-row>
     </div>
@@ -64,11 +68,9 @@
 .product {
   padding: 30px 10%;
 }
-.product-container {
-  max-height: 80vh;
-}
+.product-container,
 .product .product-images {
-  height: 80vh;
+  max-height: 80vh;
 }
 .product .product-images .all-images {
   display: flex;
@@ -111,14 +113,32 @@
   border-radius: 40px;
   font-size: 15px;
   text-transform: uppercase;
+  margin: 0 20px;
 }
 .product .product-id {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 5px;
   color: #cecece;
   text-align: right;
-  align-items: end;
+  margin: 0 20px;
 }
 
+@media (max-width: 991px) {
+  .product {
+    padding: 40px;
+  }
+  .product-container,
+  .product .product-images {
+    max-height: unset;
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 768px) {
+  .product .product-images {
+    margin-bottom: 60px;
+  }
   .product .product-images .all-images {
     flex-direction: row;
     flex-wrap: wrap;
@@ -130,6 +150,28 @@
     margin-top: 30px;
   }
 }
+
+@media (max-width: 575px) {
+  .product{
+    padding: 0 0 40px 0;
+  }
+  .product .images-cont {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .right-side {
+    padding: 40px 70px;
+  }
+
+  .product .product-images {
+    display: none;
+  }
+  .product .product-id {
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
 </style>
 
 <script>
@@ -138,6 +180,7 @@ import image_1 from "@/assets/products/cool-hibiscus-tie-dye-braided-bracelet@sm
 import image_2 from "@/assets/products/personalized-keychains.jpg";
 import image_3 from "@/assets/products/white-black-back-wristband-bracelet@small.jpg";
 import ProductSelection from "@/components/Stepper/ProductSelection.vue";
+import ProductCarousel from "@/components/ProductCarousel.vue";
 
 export default {
   name: "ProductView",
@@ -183,6 +226,7 @@ export default {
   components: {
     BreadCrumbs,
     ProductSelection,
+    ProductCarousel,
   },
 };
 </script>

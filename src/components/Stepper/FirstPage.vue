@@ -3,33 +3,37 @@
     <b-row gap="2px">
       <b-col
         lg="3"
-        md="6"
-        sm="12"
+        md="4"
+        sm="6"
         v-for="image in productStyles"
         :key="image.idx"
         @click="setStyle(image.idx)"
       >
         <b-row>
-          <div
-            class="style-image"
-            v-if="selectedStyle.idx === image.idx"
-            style="border-color: #b07943"
-          >
-            <img :src="image.src" :alt="image.alt" />
-          </div>
-          <div
-            class="style-image"
-            v-else-if="!selectedStyle.src && image.idx === 0"
-            style="border-color: #b07943"
-          >
-            <img :src="image.src" :alt="image.alt" />
-          </div>
-          <div class="style-image" v-else>
-            <img :src="image.src" :alt="image.alt" />
-          </div>
-        </b-row>
-        <b-row>
-          <div class="style-description">{{ image.description }}</div>
+          <b-col v-if="selectedStyle.idx === image.idx">
+            <div class="style-image-container">
+              <div class="style-image" style="border-color: #b07943">
+                <img :src="image.src" :alt="image.alt" />
+              </div>
+              <div class="style-description">{{ image.description }}</div>
+            </div>
+          </b-col>
+          <b-col v-else-if="!selectedStyle.src && image.idx === 0">
+            <div class="style-image-container">
+              <div class="style-image" style="border-color: #b07943">
+                <img :src="image.src" :alt="image.alt" />
+              </div>
+              <div class="style-description">{{ image.description }}</div>
+            </div>
+          </b-col>
+          <b-col v-else>
+            <div class="style-image-container">
+              <div class="style-image">
+                <img :src="image.src" :alt="image.alt" />
+              </div>
+              <div class="style-description">{{ image.description }}</div>
+            </div>
+          </b-col>
         </b-row>
       </b-col>
     </b-row>
@@ -37,6 +41,10 @@
 </template>
 
 <style scoped>
+.product-style .style-image-container {
+  display: flex;
+  flex-direction: column;
+}
 .product-style .style-image {
   border-radius: 5px;
   border: solid 0.3px #eee;
@@ -55,6 +63,12 @@
   padding: 5px 22px 15px 5px;
   text-align: left;
   text-transform: capitalize;
+}
+
+@media (max-width: 575px) {
+  .product-style .style-image {
+    height: 150px;
+  }
 }
 </style>
 
