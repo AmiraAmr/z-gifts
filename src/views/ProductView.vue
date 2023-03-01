@@ -35,29 +35,29 @@
               </b-col>
             </b-row>
           </div>
-          
+
           <product-carousel :productImages="productImages" />
         </b-col>
 
         <b-col md="12" lg="6">
           <div class="right-side">
-          <b-row align-h="between">
-            <b-col xl="3" lg="4" md="2" sm="3">
-              <div class="sale">Sale</div>
-            </b-col>
-            <b-col lg="4" md="3" sm="5">
-              <div class="product-id">
-                <div class="m-0" align-h="end">Product ID</div>
-                <div class="m-0" align-h="end">{{ productID }}</div>
-              </div>
-            </b-col>
-          </b-row>
+            <b-row align-h="between">
+              <b-col xl="3" lg="4" md="2" sm="3">
+                <div class="sale">Sale</div>
+              </b-col>
+              <b-col lg="4" md="3" sm="5">
+                <div class="product-id">
+                  <div class="m-0" align-h="end">Product ID</div>
+                  <div class="m-0" align-h="end">{{ productID }}</div>
+                </div>
+              </b-col>
+            </b-row>
 
-          <!-- Step component -->
-          <b-row>
-            <product-selection />
-          </b-row>
-        </div>
+            <!-- Step component -->
+            <b-row>
+              <product-selection />
+            </b-row>
+          </div>
         </b-col>
       </b-row>
     </div>
@@ -135,7 +135,7 @@
     margin-bottom: 30px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .product .product-images {
     margin-bottom: 60px;
   }
@@ -152,7 +152,7 @@
 }
 
 @media (max-width: 575px) {
-  .product{
+  .product {
     padding: 0 0 40px 0;
   }
   .product .images-cont {

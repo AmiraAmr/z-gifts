@@ -2,9 +2,10 @@
   <div class="product-color">
     <b-row gap="2px">
       <b-col
+      class="col-sm"
         lg="3"
-        md="6"
-        sm="12"
+        md="3"
+        sm="6"
         v-for="image in productColors"
         :key="image.idx"
         @click="setColor(image.idx)"
@@ -37,6 +38,7 @@
 </template>
 
 <style scoped>
+
 .product-color .color-image {
   border-radius: 5px;
   border: solid 0.3px #eee;
@@ -55,6 +57,12 @@
   padding: 5px 22px 15px 5px;
   text-align: left;
   text-transform: capitalize;
+}
+
+@media (max-width: 575px) {
+  .product-color .col-sm {
+    width: 50%;
+}
 }
 </style>
 

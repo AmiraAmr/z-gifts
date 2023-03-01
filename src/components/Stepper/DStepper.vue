@@ -47,7 +47,7 @@
         </div>
       </b-button>
 
-      <b-button v-if="step > 0" class="prev-button" @click="backStep">
+      <b-button v-if="step > 0 && steps[step].PreviuosLabel" class="prev-button" @click="backStep">
         <div class="arrow-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"

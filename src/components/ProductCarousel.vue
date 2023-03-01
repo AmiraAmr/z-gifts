@@ -23,11 +23,11 @@
 </template>
 
 <style scoped lang="css">
- @media (min-width: 575px) {
-    .carousel {
-        display: none;
-    }
- }
+@media (min-width: 575px) {
+  .carousel {
+    display: none;
+  }
+}
 </style>
 
 <script>
