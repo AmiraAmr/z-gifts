@@ -2,7 +2,7 @@
   <div class="product-color">
     <b-row gap="2px">
       <b-col
-      class="col-sm"
+        class="col-sm"
         lg="3"
         md="3"
         sm="6"
@@ -38,7 +38,6 @@
 </template>
 
 <style scoped>
-
 .product-color .color-image {
   border-radius: 5px;
   border: solid 0.3px #eee;
@@ -62,7 +61,7 @@
 @media (max-width: 575px) {
   .product-color .col-sm {
     width: 50%;
-}
+  }
 }
 </style>
 

@@ -1,65 +1,68 @@
 <template>
-  <div class="product">
-    <bread-crumbs
-      :levelOne="levelOne"
-      :level-two="levelTwo"
-      :level-three="levelThree"
-      :level-four="levelFour"
-    />
-    <div class="product-container">
-      <b-row>
-        <b-col md="12" lg="6" class="images-cont">
-          <div class="product-images">
-            <b-row>
-              <b-col lg="3" md="4" sm="12">
-                <div class="all-images">
-                  <div
-                    v-for="image in productImages"
-                    :key="image.idx"
-                    @click="setImage(image.idx)"
-                  >
-                    <img :src="image.src" :alt="image.alt" />
+  <div>
+    <nav-bar active-item="ProductView" />
+    <div class="product">
+      <bread-crumbs
+        :levelOne="levelOne"
+        :level-two="levelTwo"
+        :level-three="levelThree"
+        :level-four="levelFour"
+      />
+      <div class="product-container">
+        <b-row>
+          <b-col md="12" lg="6" class="images-cont">
+            <div class="product-images">
+              <b-row>
+                <b-col lg="3" md="4" sm="12">
+                  <div class="all-images">
+                    <div
+                      v-for="image in productImages"
+                      :key="image.idx"
+                      @click="setImage(image.idx)"
+                    >
+                      <img :src="image.src" :alt="image.alt" />
+                    </div>
                   </div>
-                </div>
-              </b-col>
-              <b-col lg="9" md="8" sm="12">
-                <div v-if="!selectedImage.src" class="selectedImage">
-                  <img
-                    :src="productImages[0].src"
-                    :alt="productImages[0].alt"
-                  />
-                </div>
-                <div v-if="selectedImage.src" class="selectedImage">
-                  <img :src="selectedImage.src" :alt="selectedImage.alt" />
-                </div>
-              </b-col>
-            </b-row>
-          </div>
+                </b-col>
+                <b-col lg="9" md="8" sm="12">
+                  <div v-if="!selectedImage.src" class="selectedImage">
+                    <img
+                      :src="productImages[0].src"
+                      :alt="productImages[0].alt"
+                    />
+                  </div>
+                  <div v-if="selectedImage.src" class="selectedImage">
+                    <img :src="selectedImage.src" :alt="selectedImage.alt" />
+                  </div>
+                </b-col>
+              </b-row>
+            </div>
 
-          <product-carousel :productImages="productImages" />
-        </b-col>
+            <product-carousel :productImages="productImages" />
+          </b-col>
 
-        <b-col md="12" lg="6">
-          <div class="right-side">
-            <b-row align-h="between">
-              <b-col xl="3" lg="4" md="2" sm="3">
-                <div class="sale">Sale</div>
-              </b-col>
-              <b-col lg="4" md="3" sm="5">
-                <div class="product-id">
-                  <div class="m-0" align-h="end">Product ID</div>
-                  <div class="m-0" align-h="end">{{ productID }}</div>
-                </div>
-              </b-col>
-            </b-row>
+          <b-col md="12" lg="6">
+            <div class="right-side">
+              <b-row align-h="between">
+                <b-col xl="3" lg="4" md="2" sm="3">
+                  <div class="sale">Sale</div>
+                </b-col>
+                <b-col lg="4" md="3" sm="5">
+                  <div class="product-id">
+                    <div class="m-0" align-h="end">Product ID</div>
+                    <div class="m-0" align-h="end">{{ productID }}</div>
+                  </div>
+                </b-col>
+              </b-row>
 
-            <!-- Step component -->
-            <b-row>
-              <product-selection />
-            </b-row>
-          </div>
-        </b-col>
-      </b-row>
+              <!-- Step component -->
+              <b-row>
+                <product-selection />
+              </b-row>
+            </div>
+          </b-col>
+        </b-row>
+      </div>
     </div>
   </div>
 </template>
@@ -181,6 +184,7 @@ import image_2 from "@/assets/products/personalized-keychains.jpg";
 import image_3 from "@/assets/products/white-black-back-wristband-bracelet@small.jpg";
 import ProductSelection from "@/components/Stepper/ProductSelection.vue";
 import ProductCarousel from "@/components/ProductCarousel.vue";
+import NavBar from "@/components/Layout/NavBar.vue";
 
 export default {
   name: "ProductView",
@@ -227,6 +231,7 @@ export default {
     BreadCrumbs,
     ProductSelection,
     ProductCarousel,
+    NavBar,
   },
 };
 </script>

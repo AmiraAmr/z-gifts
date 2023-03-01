@@ -2,8 +2,6 @@
   <div class="personalize-data">
     <div class="personalize-container">
       <div class="font-options">
-       
-
         <b-form-radio-group
           id="radio-slots"
           v-model="selectedFont"
@@ -53,20 +51,18 @@
         <div class="value">
           {{ count }}
         </div>
-        <button class="add" @click="add()">
-          +
-        </button>
+        <button class="add" @click="add()">+</button>
       </div>
       <div class="cart">
         <button class="add-cart">Add to cart</button>
-        <img src="@/assets/icons/heart.png" alt="heart"/>
+        <img src="@/assets/icons/heart.png" alt="heart" />
       </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="css">
-.personalize-data{ 
+.personalize-data {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -79,8 +75,8 @@
   border: solid 1px #707070;
 }
 .custom-radio .custom-control-label::before {
-    border-radius: 50%;
-    margin-top: 8px;
+  border-radius: 50%;
+  margin-top: 8px;
 }
 .personalize-container .font-options .bv-no-focus-ring {
   display: flex;
@@ -138,7 +134,7 @@
 .finish .counter .add,
 .finish .counter .subtract {
   background-color: transparent;
-    border: none;
+  border: none;
 }
 .finish .cart {
   display: flex;
@@ -149,7 +145,7 @@
   font-size: 20px;
   padding: 23px 70px;
   text-align: center;
-  color: #FFF;
+  color: #fff;
   border-radius: 5px;
   background-color: #b07943;
   border: none;
@@ -157,13 +153,11 @@
   font-weight: 600;
 }
 
-
 @media (max-width: 575px) {
   .finish {
     flex-direction: column;
+  }
 }
-}
-
 </style>
 
 <script>
@@ -175,7 +169,7 @@ export default {
         { name: "Rantera", value: "Rantera" },
         { name: "Poppins", value: "Poppins" },
         { name: "Arial", value: "Arial" },
-        { name: "Courier", value: "'Courier New', Courier, monospace" }
+        { name: "Courier", value: "'Courier New', Courier, monospace" },
       ],
       value: "",
       outputValue: "",
@@ -245,12 +239,12 @@ export default {
         .replace("[heart]", "h")
         .replace("[music]", "M");
     },
-    add: function() {
-      this.count++
+    add: function () {
+      this.count++;
     },
-    subtract: function() {
-      this.count--
-    }
+    subtract: function () {
+      this.count--;
+    },
   },
 };
 </script>
