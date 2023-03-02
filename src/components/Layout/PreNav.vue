@@ -48,7 +48,7 @@
   align-items: center;
   background-color: #343a40;
   color: #fff;
-  padding: 10px 20% 15px;
+  padding: 5px 20%;
 }
 
 .pre-nav .social-media {
