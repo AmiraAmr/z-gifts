@@ -96,6 +96,12 @@
   align-items: center;
   gap: 5px;
 }
+
+@media (max-width: 992px) {
+  .pre-nav {
+    display: none;
+  }
+}
 </style>
 
 <script>
