@@ -18,7 +18,7 @@
               <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             </div>
             <div class="nav-data">
-              <b-navbar-nav align='end' class="ml-auto">
+              <b-navbar-nav align="end" class="ml-auto">
                 <div class="nav-items-container">
                   <b-nav-item
                     v-for="navItem in navItems"
@@ -29,56 +29,56 @@
                 </div>
               </b-navbar-nav>
 
-              <b-navbar-nav class="ml-auto"  align='end'  right>
+              <b-navbar-nav class="ml-auto" align="end" right>
                 <div class="more-options">
                   <b-nav-item right>
-                  <div class="search">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      id="Outline"
-                      viewBox="0 0 24 24"
-                      width="25"
-                      height="25"
-                    >
-                      <path
-                        d="M23.707,22.293l-5.969-5.969a10.016,10.016,0,1,0-1.414,1.414l5.969,5.969a1,1,0,0,0,1.414-1.414ZM10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18Z"
-                      />
-                    </svg>
-                  </div>
+                    <div class="search">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Outline"
+                        viewBox="0 0 24 24"
+                        width="25"
+                        height="25"
+                      >
+                        <path
+                          d="M23.707,22.293l-5.969-5.969a10.016,10.016,0,1,0-1.414,1.414l5.969,5.969a1,1,0,0,0,1.414-1.414ZM10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18Z"
+                        />
+                      </svg>
+                    </div>
                   </b-nav-item>
-                  
+
                   <b-nav-item right>
-                  <div class="favs">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      id="Outline"
-                      viewBox="0 0 24 24"
-                      width="25"
-                      height="25"
-                    >
-                      <path
-                        d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z"
-                      />
-                    </svg>
-                    <p v-if="favorites.length"> {{ favorites.length }}</p>
-                  </div>
+                    <div class="favs">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Outline"
+                        viewBox="0 0 24 24"
+                        width="25"
+                        height="25"
+                      >
+                        <path
+                          d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z"
+                        />
+                      </svg>
+                      <p v-if="favorites.length">{{ favorites.length }}</p>
+                    </div>
                   </b-nav-item>
-                  
+
                   <b-nav-item right>
-                  <div class="cart">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      id="Outline"
-                      viewBox="0 0 24 24"
-                      width="25"
-                      height="25"
-                    >
-                      <path
-                        d="M21,6H18A6,6,0,0,0,6,6H3A3,3,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A3,3,0,0,0,21,6ZM12,2a4,4,0,0,1,4,4H8A4,4,0,0,1,12,2ZM22,19a3,3,0,0,1-3,3H5a3,3,0,0,1-3-3V9A1,1,0,0,1,3,8H6v2a1,1,0,0,0,2,0V8h8v2a1,1,0,0,0,2,0V8h3a1,1,0,0,1,1,1Z"
-                      />
-                    </svg>
-                    <p v-if="cart.length"> {{ cart.length }}</p>
-                  </div>
+                    <div class="cart">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Outline"
+                        viewBox="0 0 24 24"
+                        width="25"
+                        height="25"
+                      >
+                        <path
+                          d="M21,6H18A6,6,0,0,0,6,6H3A3,3,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A3,3,0,0,0,21,6ZM12,2a4,4,0,0,1,4,4H8A4,4,0,0,1,12,2ZM22,19a3,3,0,0,1-3,3H5a3,3,0,0,1-3-3V9A1,1,0,0,1,3,8H6v2a1,1,0,0,0,2,0V8h8v2a1,1,0,0,0,2,0V8h3a1,1,0,0,1,1,1Z"
+                        />
+                      </svg>
+                      <p v-if="cart.length">{{ cart.length }}</p>
+                    </div>
                   </b-nav-item>
                 </div>
               </b-navbar-nav>
@@ -104,7 +104,7 @@
 }
 
 .collapse-items-nav {
-  width: 100%
+  width: 100%;
 }
 
 .nav-bar .nav-items-container {
@@ -147,8 +147,7 @@
 }
 
 .nav-bar .favs,
-.nav-bar .cart
-{
+.nav-bar .cart {
   position: relative;
 }
 
@@ -160,7 +159,7 @@
   border: 1px solid #343a40;
   border-radius: 50%;
   background-color: #343a40;
-  color: #FFF;
+  color: #fff;
   padding: 0px 5px;
   font-size: 12px;
 }
@@ -230,7 +229,7 @@ export default {
         },
       ],
       favorites: ["item", "item", "item", "item"],
-      cart: ["item", "item"]
+      cart: ["item", "item"],
     };
   },
   components: {

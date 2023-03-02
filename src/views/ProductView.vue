@@ -10,7 +10,7 @@
       />
       <div class="product-container">
         <b-row>
-          <b-col md="12" lg="6" class="images-cont">
+          <b-col md="12" lg="5" class="images-cont">
             <div class="product-images">
               <b-row>
                 <b-col lg="3" md="4" sm="12">
@@ -41,7 +41,7 @@
             <product-carousel :productImages="productImages" />
           </b-col>
 
-          <b-col md="12" lg="6">
+          <b-col md="12" lg="7">
             <div class="right-side">
               <b-row align-h="between">
                 <b-col xl="3" lg="4" md="2" sm="3">
