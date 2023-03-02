@@ -14,10 +14,10 @@
     <div class="about-us">
       <b-container>
         <b-row>
-          <b-col>
+          <b-col lg="6" md="12">
             <div class="title">About us.</div>
           </b-col>
-          <b-col>
+          <b-col lg="6" md="12">
             <div class="description">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -50,7 +50,7 @@
               </div>
             </div>
           </b-col>
-          <b-col cols="6">
+          <b-col  lg="6" md="12">
             <img src="@/assets/dummy.png" alt="dummy img" />
           </b-col>
         </b-row>
@@ -60,10 +60,10 @@
     <div class="process">
       <b-container>
         <b-row align-v="center" class="row-gap">
-          <b-col cols="6">
+          <b-col lg="6" md="12" order-md="2"  order-sm="2" style="display: inline;">
             <img src="@/assets/dummy.png" alt="dummy img" />
           </b-col>
-          <b-col>
+          <b-col lg="6" md="12">
             <div class="title">
               <div class="main">Our process</div>
               <div class="description">
@@ -91,6 +91,7 @@
   gap: 40px;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 50px 100px;
   height: 70vh;
 }
@@ -164,6 +165,12 @@
 .about .inspiration img,
 .about .process img {
   width: 100%;
+}
+
+@media (max-width: 425px) {
+  .about .header {
+    padding: 30px;
+  }
 }
 </style>
 
