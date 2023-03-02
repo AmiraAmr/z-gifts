@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav-bar active-item="ProductView" />
+    <nav-bar />
     <div class="product">
       <bread-crumbs
         :levelOne="levelOne"
