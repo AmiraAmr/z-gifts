@@ -50,7 +50,7 @@
               </div>
             </div>
           </b-col>
-          <b-col  lg="6" md="12">
+          <b-col lg="6" md="12">
             <img src="@/assets/dummy.png" alt="dummy img" />
           </b-col>
         </b-row>
@@ -60,7 +60,13 @@
     <div class="process">
       <b-container>
         <b-row align-v="center" class="row-gap">
-          <b-col lg="6" md="12" order-md="2"  order-sm="2" style="display: inline;">
+          <b-col
+            lg="6"
+            md="12"
+            order-md="2"
+            order-sm="2"
+            style="display: inline"
+          >
             <img src="@/assets/dummy.png" alt="dummy img" />
           </b-col>
           <b-col lg="6" md="12">
