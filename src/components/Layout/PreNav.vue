@@ -18,12 +18,27 @@
       <div class="account">
         <a href="/account">
           <div class="account-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 18 24">
-  <g id="user_1_" data-name="user (1)" transform="translate(-3)">
-    <path id="Path_4" data-name="Path 4" d="M12,12A6,6,0,1,0,6,6a6,6,0,0,0,6,6ZM12,2A4,4,0,1,1,8,6a4,4,0,0,1,4-4Z" fill="#fff"/>
-    <path id="Path_5" data-name="Path 5" d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,1,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z" fill="#fff"/>
-  </g>
-</svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 18 24"
+            >
+              <g id="user_1_" data-name="user (1)" transform="translate(-3)">
+                <path
+                  id="Path_4"
+                  data-name="Path 4"
+                  d="M12,12A6,6,0,1,0,6,6a6,6,0,0,0,6,6ZM12,2A4,4,0,1,1,8,6a4,4,0,0,1,4-4Z"
+                  fill="#fff"
+                />
+                <path
+                  id="Path_5"
+                  data-name="Path 5"
+                  d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,1,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
 
             Account
           </div>

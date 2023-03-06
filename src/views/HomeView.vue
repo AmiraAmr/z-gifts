@@ -1,19 +1,33 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    Home
+    <nav-bar />
+    <div class="home-header">
+      <home-carousel />
+    </div>
+    <products-section />
+    <partners-slider />
   </div>
 </template>
 
+<style scoped>
+.home .home-header {
+  margin-bottom: 23px;
+}
+</style>
+
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import NavBar from "@/components/Layout/NavBar.vue";
+import HomeCarousel from "@/components/Home/HomeCarousel.vue";
+import ProductsSection from "@/components/Home/ProductsSection.vue";
+import PartnersSlider from "@/components/Home/PartnersSlider.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    NavBar,
+    HomeCarousel,
+    ProductsSection,
+    PartnersSlider,
   },
 };
 </script>
