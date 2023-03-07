@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="partners-container"> -->
   <b-container>
     <div class="partners">
       <div class="brand" v-for="partner in partners" :key="partner.name">
@@ -7,7 +6,6 @@
       </div>
     </div>
   </b-container>
-  <!-- </div> -->
 </template>
 
 <style scoped>
@@ -19,17 +17,15 @@
   padding: 50px 70px;
   margin: 30px 0;
   border: solid 1px #b07943;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .partners::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.partners {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
 </style>
 
 <script>

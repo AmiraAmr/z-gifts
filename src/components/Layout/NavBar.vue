@@ -3,7 +3,7 @@
     <pre-nav />
     <b-navbar toggleable="lg" type="light" variant="light">
       <div class="nav-bar">
-        <b-navbar-brand href="#">
+        <b-navbar-brand href="/">
           <div style="display: flex; gap: 7px">
             <img src="@/assets/logo.png" alt="z-letters-gifts" />
             <img src="@/assets/logo-2.png" alt="z-letters-gifts" />
