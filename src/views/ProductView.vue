@@ -13,7 +13,7 @@
           <b-col md="12" lg="5" class="images-cont">
             <div class="product-images">
               <b-row>
-                <b-col lg="3" md="4" sm="12">
+                <b-col lg="4" md="4" sm="12">
                   <div class="all-images">
                     <div
                       v-for="image in productImages"
@@ -24,7 +24,7 @@
                     </div>
                   </div>
                 </b-col>
-                <b-col lg="9" md="8" sm="12">
+                <b-col lg="8" md="8" sm="12">
                   <div v-if="!selectedImage.src" class="selectedImage">
                     <img
                       :src="productImages[0].src"
@@ -73,7 +73,7 @@
 }
 .product-container,
 .product .product-images {
-  max-height: 80vh;
+  max-height: 70vh;
 }
 .product .product-images .all-images {
   display: flex;
@@ -101,7 +101,6 @@
 .product .selectedImage {
   width: 100%;
   height: 100%;
-  padding: 0 12px;
 }
 .product .selectedImage > img {
   width: 100%;

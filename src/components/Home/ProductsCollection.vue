@@ -43,6 +43,7 @@
   margin: 0 10px;
   text-transform: capitalize;
   font-size: 13px;
+  margin-bottom: 8px;
 }
 ::v-deep .tab-link-class {
   color: #000;
@@ -105,6 +106,12 @@
   background-color: #000;
   color: #fff;
   transition: all 1s;
+}
+
+@media (max-width: 426px) {
+  .content {
+    align-items: center;
+  }
 }
 </style>
 

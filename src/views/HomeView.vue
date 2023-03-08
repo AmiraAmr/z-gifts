@@ -21,7 +21,7 @@
 .home .sections {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 45px;
 }
 </style>
 
