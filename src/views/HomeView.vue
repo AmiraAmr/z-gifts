@@ -8,6 +8,7 @@
       <products-section />
       <partners-slider />
       <products-collection />
+      <new-arrivals />
     </div>
   </div>
 </template>
@@ -29,6 +30,7 @@ import HomeCarousel from "@/components/Home/HomeCarousel.vue";
 import ProductsSection from "@/components/Home/ProductsSection.vue";
 import PartnersSlider from "@/components/Home/PartnersSlider.vue";
 import ProductsCollection from "@/components/Home/ProductsCollection.vue";
+import NewArrivals from "@/components/Home/NewArrivals.vue";
 
 export default {
   name: "HomeView",
@@ -38,6 +40,7 @@ export default {
     ProductsSection,
     PartnersSlider,
     ProductsCollection,
+    NewArrivals,
   },
 };
 </script>
