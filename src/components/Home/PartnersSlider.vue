@@ -15,7 +15,6 @@
   gap: 30px;
   overflow-x: auto;
   padding: 50px 70px;
-  margin: 30px 0;
   border: solid 1px #b07943;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
@@ -25,7 +24,6 @@
 .partners::-webkit-scrollbar {
   display: none;
 }
-
 </style>
 
 <script>
