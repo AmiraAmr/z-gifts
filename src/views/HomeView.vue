@@ -9,6 +9,7 @@
       <partners-slider />
       <products-collection />
       <new-arrivals />
+      <blog-section />
     </div>
   </div>
 </template>
@@ -31,6 +32,7 @@ import ProductsSection from "@/components/Home/ProductsSection.vue";
 import PartnersSlider from "@/components/Home/PartnersSlider.vue";
 import ProductsCollection from "@/components/Home/ProductsCollection.vue";
 import NewArrivals from "@/components/Home/NewArrivals.vue";
+import BlogSection from "@/components/Home/BlogSection.vue";
 
 export default {
   name: "HomeView",
@@ -41,6 +43,7 @@ export default {
     PartnersSlider,
     ProductsCollection,
     NewArrivals,
+    BlogSection,
   },
 };
 </script>
