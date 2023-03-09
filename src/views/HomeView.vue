@@ -11,6 +11,7 @@
       <new-arrivals />
       <blog-section />
     </div>
+    <footer-layout />
   </div>
 </template>
 
@@ -33,6 +34,7 @@ import PartnersSlider from "@/components/Home/PartnersSlider.vue";
 import ProductsCollection from "@/components/Home/ProductsCollection.vue";
 import NewArrivals from "@/components/Home/NewArrivals.vue";
 import BlogSection from "@/components/Home/BlogSection.vue";
+import FooterLayout from "@/components/Layout/FooterLayout.vue";
 
 export default {
   name: "HomeView",
@@ -44,6 +46,7 @@ export default {
     ProductsCollection,
     NewArrivals,
     BlogSection,
+    FooterLayout,
   },
 };
 </script>

@@ -91,7 +91,6 @@
     width: 70%;
     margin-top: -50%;
   }
-  
 }
 @media (max-width: 970px) {
   .slider-text .head {
