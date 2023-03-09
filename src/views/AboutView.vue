@@ -12,12 +12,12 @@
     </div>
 
     <div class="about-us">
-      <b-container>
-        <b-row>
-          <b-col lg="6" md="12">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
             <div class="title">About us.</div>
-          </b-col>
-          <b-col lg="6" md="12">
+          </div>
+          <div class="col-lg-6 col-md-12">
             <div class="description">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -31,15 +31,15 @@
                 ratione?
               </p>
             </div>
-          </b-col>
-        </b-row>
-      </b-container>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="inspiration">
-      <b-container>
-        <b-row align-v="center" class="row-gap">
-          <b-col>
+      <div class="container">
+        <div class="row" align-v="center">
+          <div class="col-lg-6 col-md-12">
             <div class="title">
               <div class="main">Our inspiration</div>
               <div class="description">
@@ -49,27 +49,23 @@
                 adipisci quasi excepturi natus architecto tempora sed eveniet?
               </div>
             </div>
-          </b-col>
-          <b-col lg="6" md="12">
+          </div>
+          <div class="col-lg-6 col-md-12">
             <img src="@/assets/dummy.png" alt="dummy img" />
-          </b-col>
-        </b-row>
-      </b-container>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="process">
-      <b-container>
-        <b-row align-v="center" class="row-gap">
-          <b-col
-            lg="6"
-            md="12"
-            order-md="2"
-            order-sm="2"
-            style="display: inline"
+      <div class="container">
+        <div class="row" align-v="center">
+          <div
+          class="col-lg-6 col-md-12 order-lg-0 order-md-1 order-sm-1 order-xs-1"
           >
             <img src="@/assets/dummy.png" alt="dummy img" />
-          </b-col>
-          <b-col lg="6" md="12">
+          </div>
+          <div class="col-lg-6 col-md-12">
             <div class="title">
               <div class="main">Our process</div>
               <div class="description">
@@ -79,9 +75,9 @@
                 adipisci quasi excepturi natus architecto tempora sed eveniet?
               </div>
             </div>
-          </b-col>
-        </b-row>
-      </b-container>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
