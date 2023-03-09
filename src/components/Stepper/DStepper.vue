@@ -1,7 +1,7 @@
 <template>
   <div class="d-stepper">
     <div :class="{ 'border-danger': error, 'shake-error': shake }">
-      <b-card-body class="d-flex">
+      <div class="card-body d-flex">
         <div>
           <div v-if="!fatalError">
             <transition :name="effect" mode="out-in">
@@ -20,13 +20,13 @@
           </div>
           <div v-else>{{ fatalErrorMsg }}</div>
         </div>
-      </b-card-body>
+      </div>
     </div>
 
     <div class="footer flex flex-col" v-if="!fatalError">
-      <b-button
-        v-if="step < steps.length - 1"
-        class="next-button"
+      <button
+      v-if="step < steps.length - 1"
+      class="btn next-button btn-secondary" type="button"
         @click="nextStep"
       >
         {{ steps[step].NextLabel }}
@@ -45,11 +45,12 @@
             />
           </svg>
         </div>
-      </b-button>
+      </button>
 
-      <b-button
+      <button
         v-if="step > 0 && steps[step].PreviuosLabel"
-        class="prev-button"
+        class="btn prev-button btn-secondary"
+        type="button"
         @click="backStep"
       >
         <div class="arrow-icon">
@@ -68,7 +69,7 @@
         </div>
 
         {{ steps[step].PreviuosLabel }}
-      </b-button>
+      </button>
     </div>
   </div>
 </template>

@@ -1,6 +1,10 @@
 <template>
   <div>
-    <b-dropdown size="sm" variant="transparent" class="m-2">
+    <b-dropdown
+      class="dropdown b-dropdown m-2 btn-group"
+      size="sm"
+      variant="transparent"
+    >
       <template #button-content>
         <span v-if="value.label" style="color: #fff">{{ value.label }}</span>
         <span v-else style="color: #fff">{{ defaultValue.label }}</span>

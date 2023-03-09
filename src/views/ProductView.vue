@@ -9,11 +9,11 @@
         :level-four="levelFour"
       />
       <div class="product-container">
-        <b-row>
-          <b-col md="12" lg="5" class="images-cont">
+        <div class="row">
+          <div class="col-md-12 col-lg-5 images-cont">
             <div class="product-images">
-              <b-row>
-                <b-col lg="4" md="4" sm="12">
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
                   <div class="all-images">
                     <div
                       v-for="image in productImages"
@@ -23,8 +23,8 @@
                       <img :src="image.src" :alt="image.alt" />
                     </div>
                   </div>
-                </b-col>
-                <b-col lg="8" md="8" sm="12">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12">
                   <div v-if="!selectedImage.src" class="selectedImage">
                     <img
                       :src="productImages[0].src"
@@ -34,34 +34,34 @@
                   <div v-if="selectedImage.src" class="selectedImage">
                     <img :src="selectedImage.src" :alt="selectedImage.alt" />
                   </div>
-                </b-col>
-              </b-row>
+                </div>
+              </div>
             </div>
 
             <product-carousel :productImages="productImages" />
-          </b-col>
+          </div>
 
-          <b-col md="12" lg="7">
+          <div class="col-lg-7 col-md-12">
             <div class="right-side">
-              <b-row align-h="between">
-                <b-col xl="3" lg="4" md="2" sm="3">
+              <div class="row justify-between" align-h="between">
+                <div class="col-xl-3 col-lg-4 col-md-2 col-sm-3">
                   <div class="sale">Sale</div>
-                </b-col>
-                <b-col lg="4" md="3" sm="5">
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-5">
                   <div class="product-id">
                     <div class="m-0" align-h="end">Product ID</div>
                     <div class="m-0" align-h="end">{{ productID }}</div>
                   </div>
-                </b-col>
-              </b-row>
+                </div>
+              </div>
 
               <!-- Step component -->
-              <b-row>
+              <div class="row">
                 <product-selection />
-              </b-row>
+              </div>
             </div>
-          </b-col>
-        </b-row>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -70,6 +70,9 @@
 <style scoped lang="css">
 .product {
   padding: 30px 10%;
+}
+.justify-between {
+  justify-content: space-between;
 }
 .product-container,
 .product .product-images {

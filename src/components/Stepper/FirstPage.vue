@@ -1,42 +1,40 @@
 <template>
   <div class="product-style">
-    <b-row gap="2px">
-      <b-col
-        lg="3"
-        md="4"
-        sm="6"
+    <div class="row">
+      <div
+      class="col-lg-3 col-md-4 col-sm-6"
         v-for="image in productStyles"
         :key="image.idx"
         @click="setStyle(image.idx)"
       >
-        <b-row>
-          <b-col v-if="selectedStyle.idx === image.idx">
+        <div class="row">
+          <div class="col" v-if="selectedStyle.idx === image.idx">
             <div class="style-image-container">
               <div class="style-image" style="border-color: #b07943">
                 <img :src="image.src" :alt="image.alt" />
               </div>
               <div class="style-description">{{ image.description }}</div>
             </div>
-          </b-col>
-          <b-col v-else-if="!selectedStyle.src && image.idx === 0">
+          </div>
+          <div class="col" v-else-if="!selectedStyle.src && image.idx === 0">
             <div class="style-image-container">
               <div class="style-image" style="border-color: #b07943">
                 <img :src="image.src" :alt="image.alt" />
               </div>
               <div class="style-description">{{ image.description }}</div>
             </div>
-          </b-col>
-          <b-col v-else>
+          </div>
+          <div class="col" v-else>
             <div class="style-image-container">
               <div class="style-image">
                 <img :src="image.src" :alt="image.alt" />
               </div>
               <div class="style-description">{{ image.description }}</div>
             </div>
-          </b-col>
-        </b-row>
-      </b-col>
-    </b-row>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

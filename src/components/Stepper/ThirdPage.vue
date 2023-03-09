@@ -69,7 +69,7 @@
   align-items: center;
 }
 .personalize-container {
-  padding: 32px 44.5px 56px 44.5px;
+  padding: 28px 35px;
   object-fit: contain;
   border-radius: 15px;
   border: solid 1px #707070;
@@ -83,17 +83,17 @@
   flex-direction: row;
   flex-wrap: wrap;
   color: #161616;
-  font-size: 25px;
+  font-size: 20px;
 }
 .personalize-container .input-data input,
 .personalize-container .output-data {
   width: 100%;
   margin: 17.5px 0.5px 23px 0.5px;
-  padding: 20px 30px 27px;
+  padding: 15px 22px 20px;
   border-radius: 23px;
   border: solid 1px #707070;
   color: #161616;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .personalize-container .input-data input {
@@ -128,7 +128,7 @@
   padding: 21px 44px;
   border-radius: 5px;
   border: solid 1px #d8d8d8;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
 }
 .finish .counter .add,
@@ -142,7 +142,7 @@
   align-items: center;
 }
 .finish .cart .add-cart {
-  font-size: 20px;
+  font-size: 18px;
   padding: 23px 70px;
   text-align: center;
   color: #fff;
@@ -221,7 +221,6 @@ export default {
       return { "font-family": `${font}, sans-serif` };
     },
     addSymbol: function (symbol) {
-      // this.setOutputValue(symbol.shape)
       this.value = this.value + symbol.value;
       this.outputValue = this.value
         .replace("[sun]", "S")
@@ -229,11 +228,6 @@ export default {
         .replace("[music]", "M");
     },
     setOutputValue: function () {
-      // if (shape) {
-      //   this.outputValue = this.outputValue + shape;
-      // } else {
-      //   this.outputValue = this.value;
-      // }
       this.outputValue = this.value
         .replace("[sun]", "S")
         .replace("[heart]", "h")

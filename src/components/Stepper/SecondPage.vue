@@ -1,16 +1,13 @@
 <template>
   <div class="product-color">
-    <b-row gap="2px">
-      <b-col
-        class="col-sm"
-        lg="3"
-        md="3"
-        sm="6"
+    <div class="row" gap="2px">
+      <div
+        class="col-lg-3 col-md-3 col-sm-6"
         v-for="image in productColors"
         :key="image.idx"
         @click="setColor(image.idx)"
       >
-        <b-row>
+        <div class="row">
           <div
             class="color-image"
             v-if="selectedColor.idx === image.idx"
@@ -28,12 +25,12 @@
           <div class="color-image" v-else>
             <img :src="image.src" :alt="image.alt" />
           </div>
-        </b-row>
-        <b-row>
+        </div>
+        <div class="row">
           <div class="color-description">{{ image.description }}</div>
-        </b-row>
-      </b-col>
-    </b-row>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

@@ -61,7 +61,7 @@
       <div class="container">
         <div class="row" align-v="center">
           <div
-          class="col-lg-6 col-md-12 order-lg-0 order-md-1 order-sm-1 order-xs-1"
+            class="col-lg-6 col-md-12 order-lg-0 order-md-1 order-sm-1 order-xs-1"
           >
             <img src="@/assets/dummy.png" alt="dummy img" />
           </div>

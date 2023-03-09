@@ -1,14 +1,14 @@
 <template>
   <div>
     <pre-nav />
-    <b-navbar toggleable="lg" type="light" variant="light">
+    <nav class="navbar navbar-light bg-light navbar-expand-lg">
       <div class="nav-bar">
-        <b-navbar-brand href="/">
+        <a class="navbar-brand" href="/">
           <div style="display: flex; gap: 7px">
             <img src="@/assets/logo.png" alt="z-letters-gifts" />
             <img src="@/assets/logo-2.png" alt="z-letters-gifts" />
           </div>
-        </b-navbar-brand>
+        </a>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -18,20 +18,20 @@
               <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             </div>
             <div class="nav-data">
-              <b-navbar-nav align="end" class="ml-auto">
+              <div class="navbar-nav ml-auto justify-content-end">
                 <div class="nav-items-container">
-                  <b-nav-item
+                  <div class="nav-item"
                     v-for="navItem in navItems"
                     :key="navItem.label"
                     :href="navItem.route"
-                    >{{ navItem.label }}</b-nav-item
+                    >{{ navItem.label }}</div
                   >
                 </div>
-              </b-navbar-nav>
+              </div>
 
-              <b-navbar-nav class="ml-auto" align="end" right>
+              <div class="navbar-nav ml-auto justify-content-end" right>
                 <div class="more-options">
-                  <b-nav-item right>
+                  <div class="nav-item" right>
                     <div class="search">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -45,9 +45,9 @@
                         />
                       </svg>
                     </div>
-                  </b-nav-item>
+                  </div>
 
-                  <b-nav-item right>
+                  <div class="nav-item" right>
                     <div class="favs">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -62,9 +62,9 @@
                       </svg>
                       <p v-if="favorites.length">{{ favorites.length }}</p>
                     </div>
-                  </b-nav-item>
+                  </div>
 
-                  <b-nav-item right>
+                  <div class="nav-item" right>
                     <div class="cart">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -79,14 +79,14 @@
                       </svg>
                       <p v-if="cart.length">{{ cart.length }}</p>
                     </div>
-                  </b-nav-item>
+                  </div>
                 </div>
-              </b-navbar-nav>
+              </div>
             </div>
           </div>
         </b-collapse>
       </div>
-    </b-navbar>
+    </nav>
   </div>
 </template>
 
