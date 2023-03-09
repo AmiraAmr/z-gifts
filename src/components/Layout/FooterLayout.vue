@@ -22,11 +22,15 @@
               </div>
 
               <div class="social-media">
-              <div class="media" v-for="media in socialMedia" :key="media.name">
-                <a :href="'//' + media.link" target="_blank">
-                  <img :src="media.icon" :alt="media.name" />
-                </a>
-              </div>
+                <div
+                  class="media"
+                  v-for="media in socialMedia"
+                  :key="media.name"
+                >
+                  <a :href="'//' + media.link" target="_blank">
+                    <img :src="media.icon" :alt="media.name" />
+                  </a>
+                </div>
               </div>
             </div>
           </b-col>
@@ -35,9 +39,9 @@
             <!-- info -->
             <h4>information</h4>
             <div class="information">
-                <div class="info" v-for="info in information" :key="info.title">
-                    <a :href="info.link">{{ info.title }}</a>
-                </div>
+              <div class="info" v-for="info in information" :key="info.title">
+                <a :href="info.link">{{ info.title }}</a>
+              </div>
             </div>
           </b-col>
 
@@ -45,9 +49,13 @@
             <!-- account -->
             <h4>account details</h4>
             <div class="account-details">
-                <div class="details" v-for="contact in accountDetails" :key="contact.title">
-                    <a :href="contact.link">{{ contact.title }}</a>
-                </div>
+              <div
+                class="details"
+                v-for="contact in accountDetails"
+                :key="contact.title"
+              >
+                <a :href="contact.link">{{ contact.title }}</a>
+              </div>
             </div>
           </b-col>
 
@@ -55,9 +63,13 @@
             <!-- payments -->
             <h4>safe payments</h4>
             <div class="payment-methods">
-                <div class="payment" v-for="payment in payments" :key="payment.name">
-                    <img :src="payment.logo" :alt="payment.name" />
-                </div>
+              <div
+                class="payment"
+                v-for="payment in payments"
+                :key="payment.name"
+              >
+                <img :src="payment.logo" :alt="payment.name" />
+              </div>
             </div>
           </b-col>
         </b-row>
@@ -68,84 +80,80 @@
 
 <style scoped>
 .footer {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 
 .footer .contact,
 .footer .information,
 .footer .account-details,
-.footer .payment-methods 
-{
-    margin-bottom: 30px;
+.footer .payment-methods {
+  margin-bottom: 30px;
 }
-
 
 .footer .contact {
-    display: flex;
-    flex-direction: column;
-    gap:15px;
-    color: #9d9d9c;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #9d9d9c;
 }
 .footer .contact .contact-info {
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
-    align-items: center;
-    margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+  margin: 5px 0;
 }
 .footer .contact .social-media {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 .footer .contact .media {
   width: 20px;
   height: 20px;
 }
 .footer .contact .media img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .footer h4 {
-    text-transform: capitalize;
-    margin-bottom: 15px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
 }
 
 .footer .information,
-.footer .account-details
-{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.footer .account-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .footer .information .info a,
-.footer .account-details .details a
-{
-    text-transform: capitalize;
-    color: #9d9d9c;
-    font-size: 18px;
-    font-weight: 600px;
+.footer .account-details .details a {
+  text-transform: capitalize;
+  color: #9d9d9c;
+  font-size: 18px;
+  font-weight: 600px;
 }
 
 .footer .payment-methods {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 .footer .payment-methods .payment {
-    height: 65px;
-    width: 65px;
+  height: 65px;
+  width: 65px;
 }
 .footer .payment-methods .payment img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 992px) {
-    .footer .payment-methods {
-        flex-direction: column;
-    }
+  .footer .payment-methods {
+    flex-direction: column;
+  }
 }
 </style>
 
@@ -193,55 +201,55 @@ export default {
         },
       ],
       information: [
-      {
-            title: "about us",
-            link: "/about"
+        {
+          title: "about us",
+          link: "/about",
         },
-      {
-            title: "contact us",
-            link: "/contact"
+        {
+          title: "contact us",
+          link: "/contact",
         },
-      {
-            title: "terms & conditions",
-            link: "/terms"
+        {
+          title: "terms & conditions",
+          link: "/terms",
         },
-      {
-            title: "shipping & delivery",
-            link: "/shipping"
+        {
+          title: "shipping & delivery",
+          link: "/shipping",
         },
       ],
       accountDetails: [
         {
-            title: "my account",
-            link: "/account"
+          title: "my account",
+          link: "/account",
         },
         {
-            title: "view cart",
-            link: "/cart"
+          title: "view cart",
+          link: "/cart",
         },
         {
-            title: "my wishlist",
-            link: "/wishlist"
+          title: "my wishlist",
+          link: "/wishlist",
         },
         {
-            title: "track order",
-            link: "/order/track"
+          title: "track order",
+          link: "/order/track",
         },
       ],
       payments: [
         {
-            name: "visa",
-            logo: visa
+          name: "visa",
+          logo: visa,
         },
         {
-            name: "visa 1",
-            logo: visa
+          name: "visa 1",
+          logo: visa,
         },
         {
-            name: "visa 2",
-            logo: visa
-        }
-      ]
+          name: "visa 2",
+          logo: visa,
+        },
+      ],
     };
   },
   components: {

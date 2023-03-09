@@ -117,8 +117,8 @@
 }
 .navbar-light .navbar-toggler {
   position: absolute;
-    right: 0;
-    top: 20%;
+  right: 0;
+  top: 20%;
 }
 
 .nav-bar .nav-data {
