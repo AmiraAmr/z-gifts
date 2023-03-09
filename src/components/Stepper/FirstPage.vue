@@ -2,7 +2,7 @@
   <div class="product-style">
     <div class="row">
       <div
-      class="col-lg-3 col-md-4 col-sm-6"
+        class="col-lg-3 col-md-4 col-sm-6"
         v-for="image in productStyles"
         :key="image.idx"
         @click="setStyle(image.idx)"

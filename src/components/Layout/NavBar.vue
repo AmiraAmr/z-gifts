@@ -20,12 +20,14 @@
             <div class="nav-data">
               <div class="navbar-nav ml-auto justify-content-end">
                 <div class="nav-items-container">
-                  <div class="nav-item"
+                  <div
+                    class="nav-item"
                     v-for="navItem in navItems"
                     :key="navItem.label"
                     :href="navItem.route"
-                    >{{ navItem.label }}</div
                   >
+                    {{ navItem.label }}
+                  </div>
                 </div>
               </div>
 

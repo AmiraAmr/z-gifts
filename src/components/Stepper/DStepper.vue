@@ -25,8 +25,9 @@
 
     <div class="footer flex flex-col" v-if="!fatalError">
       <button
-      v-if="step < steps.length - 1"
-      class="btn next-button btn-secondary" type="button"
+        v-if="step < steps.length - 1"
+        class="btn next-button btn-secondary"
+        type="button"
         @click="nextStep"
       >
         {{ steps[step].NextLabel }}
