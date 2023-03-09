@@ -115,6 +115,11 @@
 .nav-bar .toggle-in-sm {
   display: none;
 }
+.navbar-light .navbar-toggler {
+  position: absolute;
+    right: 0;
+    top: 20%;
+}
 
 .nav-bar .nav-data {
   display: flex;

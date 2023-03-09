@@ -33,20 +33,24 @@
 <style scoped>
 .pre-footer {
   background-color: #282828;
-  padding: 40px 0;
-}
-.pre-footer .content .item .title {
-    color: #fafafa;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: capitalize;
-    margin-bottom: 8px;
-}
-.pre-footer .content .item .description {
-    color: #cbcbcc;
-    font-size: 14px;
+  padding: 40px 0 0 0;
+  margin-top: 30px;
 }
 
+.pre-footer .content .item {
+  margin-bottom: 40px;
+}
+.pre-footer .content .item .title {
+  color: #fafafa;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+.pre-footer .content .item .description {
+  color: #cbcbcc;
+  font-size: 14px;
+}
 </style>
 
 <script>
