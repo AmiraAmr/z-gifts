@@ -1,7 +1,9 @@
 <template>
   <div>
     <pre-footer />
-    footer
+    <b-container>
+        
+    </b-container>
   </div>
 </template>
 
