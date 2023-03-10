@@ -1,10 +1,10 @@
 <template>
   <div>
     <pre-footer />
-    <b-container>
+    <div class="container">
       <div class="footer">
-        <b-row align-h="center">
-          <b-col lg="3" md="6" sm="6">
+        <div class="row" align-h="center">
+          <div class="col-lg-3 col-md-6 col-sm-6">
             <!-- contact -->
             <div class="contact">
               <div>
@@ -33,9 +33,9 @@
                 </div>
               </div>
             </div>
-          </b-col>
+          </div>
 
-          <b-col lg="3" md="6" sm="6">
+          <div class="col-lg-3 col-md-6 col-sm-6">
             <!-- info -->
             <h4>information</h4>
             <div class="information">
@@ -43,9 +43,9 @@
                 <a :href="info.link">{{ info.title }}</a>
               </div>
             </div>
-          </b-col>
+          </div>
 
-          <b-col lg="3" md="6" sm="6">
+          <div class="col-lg-3 col-md-6 col-sm-6">
             <!-- account -->
             <h4>account details</h4>
             <div class="account-details">
@@ -57,9 +57,9 @@
                 <a :href="contact.link">{{ contact.title }}</a>
               </div>
             </div>
-          </b-col>
+          </div>
 
-          <b-col lg="3" md="6" sm="6" order-md="2">
+          <div class="col-lg-3 col-md-6 col-sm-6 order-md-2">
             <!-- payments -->
             <h4>safe payments</h4>
             <div class="payment-methods">
@@ -71,10 +71,10 @@
                 <img :src="payment.logo" :alt="payment.name" />
               </div>
             </div>
-          </b-col>
-        </b-row>
+          </div>
+        </div>
       </div>
-    </b-container>
+    </div>
   </div>
 </template>
 

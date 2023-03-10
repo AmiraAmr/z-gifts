@@ -1,12 +1,16 @@
 <template>
-  <b-container>
+  <div class="container">
     <div class="blog">
       <h3>Latest from blog</h3>
 
-      <b-row gap="2px" align-h="center">
-        <b-col lg="3" md="4" sm="6" v-for="blog in blogs" :key="blog.index">
-          <b-row>
-            <b-col>
+      <div class="row blog-row">
+        <div
+          class="col-lg-3 col-md-4 col-sm-6"
+          v-for="blog in blogs"
+          :key="blog.index"
+        >
+          <div class="row">
+            <div>
               <div class="blog-container">
                 <div class="blog-image">
                   <img :src="blog.image" :alt="blog.title" />
@@ -14,8 +18,8 @@
                 <div class="description">
                   <div class="title">{{ blog.title }}</div>
                   <div class="date-container">
-                    <b-row align-v="center">
-                      <b-col cols="3">
+                    <div class="row" align-v="center">
+                      <div class="col-3">
                         <svg
                           data-name="calendar (3)"
                           xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +101,8 @@
                             </g>
                           </g>
                         </svg>
-                      </b-col>
-                      <b-col>
+                      </div>
+                      <div>
                         <div class="date-details">
                           <div class="day">
                             {{ blog.date | moment("dddd") }}
@@ -107,17 +111,17 @@
                             {{ blog.date | moment("DD MMMM") }}
                           </div>
                         </div>
-                      </b-col>
-                    </b-row>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </b-col>
-          </b-row>
-        </b-col>
-      </b-row>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </b-container>
+  </div>
 </template>
 
 <style scoped>
@@ -125,6 +129,10 @@
   text-align: center;
   text-transform: capitalize;
   margin-bottom: 15px;
+}
+.blog-row {
+  gap: 32px;
+  justify-content: center;
 }
 .blog .blog-container .blog-image {
   border: 1px solid transparent;

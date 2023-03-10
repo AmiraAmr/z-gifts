@@ -20,20 +20,19 @@
             <div class="nav-data">
               <div class="navbar-nav ml-auto justify-content-end">
                 <div class="nav-items-container">
-                  <div
-                    class="nav-item"
+                  <b-nav-item
                     v-for="navItem in navItems"
                     :key="navItem.label"
                     :href="navItem.route"
                   >
                     {{ navItem.label }}
-                  </div>
+                  </b-nav-item>
                 </div>
               </div>
 
               <div class="navbar-nav ml-auto justify-content-end" right>
                 <div class="more-options">
-                  <div class="nav-item" right>
+                  <b-nav-item right>
                     <div class="search">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -47,9 +46,9 @@
                         />
                       </svg>
                     </div>
-                  </div>
+                  </b-nav-item>
 
-                  <div class="nav-item" right>
+                  <b-nav-item right>
                     <div class="favs">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -64,9 +63,9 @@
                       </svg>
                       <p v-if="favorites.length">{{ favorites.length }}</p>
                     </div>
-                  </div>
+                  </b-nav-item>
 
-                  <div class="nav-item" right>
+                  <b-nav-item right>
                     <div class="cart">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +80,7 @@
                       </svg>
                       <p v-if="cart.length">{{ cart.length }}</p>
                     </div>
-                  </div>
+                  </b-nav-item>
                 </div>
               </div>
             </div>

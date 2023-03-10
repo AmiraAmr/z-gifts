@@ -1,11 +1,11 @@
 <template>
-  <b-container>
+  <div class="container">
     <div class="partners">
       <div class="brand" v-for="partner in partners" :key="partner.name">
         <img :src="partner.logo" :alt="partner.name" />
       </div>
     </div>
-  </b-container>
+  </div>
 </template>
 
 <style scoped>

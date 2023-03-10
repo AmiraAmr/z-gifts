@@ -1,32 +1,30 @@
 <template>
   <div class="pre-footer">
-    <b-container>
+    <div class="container">
       <div class="content">
-        <b-row align-h="center">
-          <b-col
-            lg="4"
-            md="6"
-            sm="12"
+        <div class="row" align-h="center">
+          <div
+            class="col-lg-4 col-md-6 col-sm-12"
             v-for="data in footerData"
             :key="data.title"
           >
             <div class="item">
-              <b-row align-v="center">
-                <b-col cols="3">
+              <div class="row" align-v="center">
+                <div class="col-3">
                   <img :src="data.icon" :alt="data.title" />
-                </b-col>
-                <b-col cols="9">
+                </div>
+                <div class="col-9">
                   <div class="details">
                     <div class="title">{{ data.title }}</div>
                     <div class="description">{{ data.description }}</div>
                   </div>
-                </b-col>
-              </b-row>
+                </div>
+              </div>
             </div>
-          </b-col>
-        </b-row>
+          </div>
+        </div>
       </div>
-    </b-container>
+    </div>
   </div>
 </template>
 

@@ -1,20 +1,18 @@
 <template>
-  <b-container>
+  <div class="container">
     <div class="new-arrivals">
       <div class="title">
         <h3>New arrivals</h3>
         <p>Hurry up! limited</p>
       </div>
-      <b-row gap="2px">
-        <b-col
-          lg="3"
-          md="4"
-          sm="6"
+      <div class="row new-arrivals-row">
+        <div
+          class="col-lg-3 col-md-4 col-sm-6"
           v-for="image in newArrivalsProducts"
           :key="image.idx"
         >
-          <b-row>
-            <b-col>
+          <div class="row" style="padding: 20px">
+            <div>
               <div class="image-container">
                 <div class="image">
                   <img :src="image.src" :alt="image.alt" />
@@ -24,12 +22,12 @@
                   <div class="price">${{ image.price }}</div>
                 </div>
               </div>
-            </b-col>
-          </b-row>
-        </b-col>
-      </b-row>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </b-container>
+  </div>
 </template>
 
 <style scoped>

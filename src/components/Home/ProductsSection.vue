@@ -1,7 +1,11 @@
 <template>
-  <b-container>
-    <b-row>
-      <b-col md="6" sm="12" v-for="product in products" :key="product.index">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-md-6 col-sm-12"
+        v-for="product in products"
+        :key="product.index"
+      >
         <div
           class="product"
           :style="{ 'background-image': `url(${product.image})` }"
@@ -15,9 +19,9 @@
             </div>
           </div>
         </div>
-      </b-col>
-    </b-row>
-  </b-container>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>

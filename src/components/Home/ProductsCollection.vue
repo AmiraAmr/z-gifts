@@ -1,6 +1,6 @@
 <template>
   <div class="collection-tabs">
-    <b-container>
+    <div class="container">
       <h3>collections</h3>
       <b-card no-body>
         <b-tabs pills align="center" content-class="mt-3">
@@ -32,7 +32,7 @@
           </b-tab>
         </b-tabs>
       </b-card>
-    </b-container>
+    </div>
   </div>
 </template>
 
