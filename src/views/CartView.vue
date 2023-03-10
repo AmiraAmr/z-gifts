@@ -21,7 +21,7 @@
         </ol>
 
         <!-- cart table -->
-        <div>
+        <div class="row">
           <div class="cart-table-header">
             <div class="row">
               <div class="col-lg-11">
@@ -46,18 +46,18 @@
 
           <div class="cart-table">
             <div class="row center-table-row">
-              <div class="col-lg-11">
+              <div class="col-11">
                 <div class="row center-table-row">
                   <div class="col-lg-7">
                     <div class="item">
-                      <div class="row center-table-row">
-                        <div class="col-5">
+                      <div class="row center-image-row">
+                        <div class="col-md-5 col-xs-12">
                           <img
                             src="@/assets/products/wristband-bracelet.png"
                             alt="item"
                           />
                         </div>
-                        <div class="col-7">
+                        <div class="col-md-7 col-xs-12">
                           <div class="title">
                             This bracelet description
                             <span>with some customization</span>
@@ -90,7 +90,7 @@
                 </div>
               </div>
               <!-- Delete icon -->
-              <div class="col-lg-1"><div class="delete">X</div></div>
+              <div class="col-1"><div class="delete">X</div></div>
             </div>
           </div>
         </div>
@@ -142,8 +142,8 @@
               </div>
             </div>
             <div class="total">
-                <div>total</div>
-                <div class="price">$18.36</div>
+              <div>total</div>
+              <div class="price">$18.36</div>
             </div>
             <button class="checkout">checkout</button>
           </div>
@@ -179,8 +179,12 @@
 .cart .cart-table {
   padding-top: 30px;
 }
-.cart .center-table-row {
+.cart .center-table-row,
+.cart .center-image-row {
   align-items: center;
+}
+.cart .cart-table-header {
+  width: 100%;
 }
 .cart .cart-table-header h4 {
   font-size: 18px;
@@ -266,6 +270,7 @@
 .checkout-section .promos .input-field input {
   border: none;
   outline: none;
+  width: 70%;
 }
 
 .checkout-section button.checkout,
@@ -279,6 +284,10 @@
   transition: all 0.5s;
 }
 
+.checkout-section .promos .input-field button {
+  width: 30%;
+}
+
 .checkout-section button.checkout:hover,
 .checkout-section .promos .input-field button:hover {
   background-color: #fff;
@@ -286,18 +295,54 @@
   transition: all 0.5s;
 }
 .checkout-section .total {
-    display: flex;
-    flex-direction: row;
-    gap:10px;
-    font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
   font-weight: 300;
   text-transform: capitalize;
 }
 .checkout-section .total .price {
-    font-weight: bold;
+  font-weight: bold;
 }
 .checkout-section button.checkout {
-    padding: 8px 35px;
+  padding: 8px 35px;
+}
+
+@media (max-width: 992px) {
+  .cart .cart-table-header {
+    display: none;
+  }
+  .cart .center-table-row {
+    align-items: flex-start;
+  }
+  .cart .cart-table .data {
+    padding: 10px 0;
+  }
+  .cart .checkout-section,
+  .cart .checkout-section .promos {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cart .checkout-section .promos > div,
+  .cart .checkout-section .promos > button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 467px) {
+  .item .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cart .cart-table {
+    padding: 0 20px;
+  }
+  .cart .cart-table img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
 }
 </style>
 
