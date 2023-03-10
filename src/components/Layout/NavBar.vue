@@ -64,7 +64,7 @@
                     </div>
                   </b-nav-item>
 
-                  <b-nav-item right>
+                  <b-nav-item right href="/cart">
                     <div class="cart">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
