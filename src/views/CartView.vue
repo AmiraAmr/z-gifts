@@ -145,7 +145,7 @@
               <div>total</div>
               <div class="price">$18.36</div>
             </div>
-            <button class="checkout">checkout</button>
+            <button class="checkout"><a href="/checkout">checkout</a></button>
           </div>
         </div>
       </div>
@@ -293,6 +293,14 @@
   background-color: #fff;
   color: #b07943;
   transition: all 0.5s;
+}
+.checkout-section button a {
+  color: #fff;
+}
+
+.checkout-section button.checkout:hover a {
+  color: #b07943;
+  text-decoration: none;
 }
 .checkout-section .total {
   display: flex;
