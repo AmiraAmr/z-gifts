@@ -5,8 +5,7 @@
       <div class="nav-bar">
         <a class="navbar-brand" href="/">
           <div style="display: flex; gap: 7px">
-            <img src="@/assets/logo.png" alt="z-letters-gifts" />
-            <img src="@/assets/logo-2.png" alt="z-letters-gifts" />
+            <img src="@/assets/Logo.svg" alt="z-letters-gifts" />
           </div>
         </a>
 

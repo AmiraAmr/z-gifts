@@ -4,11 +4,11 @@
     <div class="container">
       <div class="footer">
         <div class="row" align-h="center">
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-12 col-sm-12">
             <!-- contact -->
             <div class="contact">
               <div>
-                <img src="@/assets/logo-2.png" alt="logo" />
+                <img src="@/assets/Logo.svg" alt="logo" />
               </div>
               <div>
                 <div
@@ -35,7 +35,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-6 col-sm-6">
             <!-- info -->
             <h4>information</h4>
             <div class="information">
@@ -45,7 +45,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-6 col-sm-6">
             <!-- account -->
             <h4>account details</h4>
             <div class="account-details">
@@ -55,20 +55,6 @@
                 :key="contact.title"
               >
                 <a :href="contact.link">{{ contact.title }}</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-6 order-md-2">
-            <!-- payments -->
-            <h4>safe payments</h4>
-            <div class="payment-methods">
-              <div
-                class="payment"
-                v-for="payment in payments"
-                :key="payment.name"
-              >
-                <img :src="payment.logo" :alt="payment.name" />
               </div>
             </div>
           </div>

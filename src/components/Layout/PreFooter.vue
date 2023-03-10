@@ -11,7 +11,9 @@
             <div class="item">
               <div class="row" align-v="center">
                 <div class="col-3">
-                  <img :src="data.icon" :alt="data.title" />
+                  <div class="item-image">
+                    <img :src="data.icon" :alt="data.title" />
+                  </div>
                 </div>
                 <div class="col-9">
                   <div class="details">
@@ -38,6 +40,10 @@
 .pre-footer .content .item {
   margin-bottom: 40px;
 }
+.pre-footer .content .item .item-image img {
+  height: 100%;
+  width: 100%;
+}
 .pre-footer .content .item .title {
   color: #fafafa;
   font-size: 18px;
@@ -52,25 +58,27 @@
 </style>
 
 <script>
-import Logo from "@/assets/logo.png";
+import boxes from "@/assets/footer/boxes.png";
+import coins from "@/assets/footer/coins.png";
+import diploma from "@/assets/footer/diploma.png";
 export default {
   data() {
     return {
       footerData: [
         {
-          icon: Logo,
+          icon: boxes,
           title: "Extra fast delivery",
           description:
             "Your order will be delivered in 3-5 business days after all of your items are available",
         },
         {
-          icon: Logo,
+          icon: coins,
           title: "Best prices",
           description:
             "We will match the product prices of key online and local competitions for immediately",
         },
         {
-          icon: Logo,
+          icon: diploma,
           title: "Guarantee",
           description:
             "If the item you want is not available, we can process a return and place a new order",
