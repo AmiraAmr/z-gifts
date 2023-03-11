@@ -570,6 +570,31 @@
   color: #000;
   background-color: #fff;
 }
+
+@media (max-width: 1024px) {
+  .checkout .order .card .pricing .coupon {
+    flex-direction: column;
+  }
+  .checkout .order .card .pricing .coupon input,
+  .checkout .order .card .pricing .coupon button {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout .order .card .date-specification {
+    flex-direction: column;
+  }
+}
+@media (max-width: 425px) {
+  .checkout .order .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkout .order .buttons button {
+    width: 90%;
+  }
+}
 </style>
 
 <script>
