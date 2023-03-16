@@ -4,28 +4,30 @@
     <div class="login">
       <div class="container">
         <div class="back">
-          <svg
-            fill="#000000"
-            width="20px"
-            height="20px"
-            viewBox="0 0 24 24"
-            id="left-arrow"
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon line"
-          >
-            <path
-              id="primary"
-              d="M21,12H3M6,9,3,12l3,3"
-              style="
-                fill: none;
-                stroke: rgb(0, 0, 0);
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                stroke-width: 1.5;
-              "
-            ></path>
-          </svg>
-          Back to website
+          <a href="/">
+            <svg
+              fill="#000000"
+              width="20px"
+              height="20px"
+              viewBox="0 0 24 24"
+              id="left-arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon line"
+            >
+              <path
+                id="primary"
+                d="M21,12H3M6,9,3,12l3,3"
+                style="
+                  fill: none;
+                  stroke: rgb(0, 0, 0);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 1.5;
+                "
+              ></path>
+            </svg>
+            Back to website
+          </a>
         </div>
 
         <div class="container">
@@ -119,6 +121,11 @@
   font-size: 17px;
   font-weight: 600;
   text-transform: capitalize;
+}
+
+.login .back a {
+  color: #000;
+  text-decoration: none;
 }
 
 .login .body {
