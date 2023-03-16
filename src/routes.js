@@ -5,6 +5,7 @@ import RegisterView from "@/views/RegisterView.vue";
 import ProductView from "@/views/ProductView.vue";
 import CartView from "@/views/CartView.vue";
 import CheckoutView from "@/views/CheckoutView.vue";
+import AccountView from "@/views/AccountView.vue";
 
 export default {
   "/": HomeView,
@@ -14,4 +15,5 @@ export default {
   "/product": ProductView,
   "/cart": CartView,
   "/checkout": CheckoutView,
+  "/account": AccountView,
 };
