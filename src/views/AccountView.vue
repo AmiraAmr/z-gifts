@@ -62,16 +62,16 @@
                 </button>
                 <button
                   class="nav-link"
-                  id="v-pills-profile-tab"
+                  id="v-pills-favorites-tab"
                   data-toggle="pill"
-                  data-target="#v-pills-profile"
+                  data-target="#v-pills-favorites"
                   type="button"
                   role="tab"
-                  aria-controls="v-pills-profile"
+                  aria-controls="v-pills-favorites"
                   aria-selected="false"
                 >
                   <div class="tab-title">
-                    <div>your details</div>
+                    <div>favorites</div>
                     <div class="d-none d-md-block">
                       <svg
                         width="30px"
@@ -174,11 +174,87 @@
                 </div>
                 <div
                   class="tab-pane fade"
-                  id="v-pills-profile"
+                  id="v-pills-favorites"
                   role="tabpanel"
-                  aria-labelledby="v-pills-profile-tab"
+                  aria-labelledby="v-pills-favorites-tab"
                 >
-                  ...
+                  <div class="favorites">
+                    <h3>favorites</h3>
+                    <div class="content">
+                      <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                          <div class="item">
+                            <div class="item-img">
+                              <img
+                                src="@/assets/Home/wide-brown-studded-cuff-bracelet@small@3x.png"
+                                alt="bracelte"
+                              />
+                            </div>
+                            <div class="description">
+                              Worn Braided Custom Leather Bracelet
+                            </div>
+                            <div class="price">$15.95</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                          <div class="item">
+                            <div class="item-img">
+                              <img
+                                src="@/assets/Home/wide-brown-studded-cuff-bracelet@small@3x.png"
+                                alt="bracelte"
+                              />
+                            </div>
+                            <div class="description">
+                              Worn Braided Custom Leather Bracelet
+                            </div>
+                            <div class="price">$15.95</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                          <div class="item">
+                            <div class="item-img">
+                              <img
+                                src="@/assets/Home/wide-brown-studded-cuff-bracelet@small@3x.png"
+                                alt="bracelte"
+                              />
+                            </div>
+                            <div class="description">
+                              Worn Braided Custom Leather Bracelet
+                            </div>
+                            <div class="price">$15.95</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                          <div class="item">
+                            <div class="item-img">
+                              <img
+                                src="@/assets/Home/wide-brown-studded-cuff-bracelet@small@3x.png"
+                                alt="bracelte"
+                              />
+                            </div>
+                            <div class="description">
+                              Worn Braided Custom Leather Bracelet
+                            </div>
+                            <div class="price">$15.95</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                          <div class="item">
+                            <div class="item-img">
+                              <img
+                                src="@/assets/Home/wide-brown-studded-cuff-bracelet@small@3x.png"
+                                alt="bracelte"
+                              />
+                            </div>
+                            <div class="description">
+                              Worn Braided Custom Leather Bracelet
+                            </div>
+                            <div class="price">$15.95</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div
                   class="tab-pane fade"
@@ -264,15 +340,19 @@
   }
 }
 
+/* all tabs titles */
+
+.details h3,
+.favorites h3 {
+  font-size: 37px;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
 /* Details tab */
 .details {
   display: flex;
   flex-direction: column;
-}
-.details h3 {
-  font-size: 37px;
-  text-transform: capitalize;
-  font-weight: normal;
 }
 .details hr {
   width: 100%;
@@ -339,6 +419,23 @@
   .details .actions button {
     width: 100%;
   }
+}
+
+/* Favorites */
+.favorites .content {
+  padding: 30px 0;
+}
+.favorites .content .item .item-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.favorites .content .item .description {
+  font-size: 14px;
+}
+.favorites .content .item .price {
+  font-size: 14px;
+  margin: 3px 0 20px;
 }
 </style>
 
