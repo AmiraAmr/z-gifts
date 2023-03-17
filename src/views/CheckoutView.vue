@@ -100,7 +100,7 @@
                             <input type="number" placeholder="Floor" />
                           </div>
                           <div class="col-md-4">
-                            <input type="number" placeholder="Apaerment" />
+                            <input type="number" placeholder="Aparment" />
                           </div>
                           <div class="col-md-4">
                             <input type="text" placeholder="Office/Desk" />
